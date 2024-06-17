@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rick and Morty Fun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="dist/main.js"></script>
+    <link rel="icon" href="img/favicon-32x32.png">
+</head>
+
+<body>
+    <main class="container">
+        <div id="character-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times</span>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+        <section class="search-wrapper">
+
+            <div class="logo">
+                <a id="logo" href=".."><img class="logo" src="img/logo.png" alt="logo"></a>                
+            </div>
+
+            <h2>Rick and Morty Fun</h2>            
+
+            <div class="search-keyword">                    
+                <input id="searchInput" type="text" size="20" maxlength="20" placeholder="Type here" /> 
+            </div>
+            
+            <div class="search-filters">
+                <select id="genderFilter">
+                    <option value="">Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="genderless">Genderless</option>
+                    <option value="unknown">Unknown</option>
+                </select>    
+                <select id="speciesFilter">
+                    <option value="">Species</option>
+                    <option value="human">Human</option>
+                    <option value="alien">Alien</option>
+                    <option value="humanoid">Humanoid</option>
+                    <option value="unknown">Unknown</option>
+                </select> 
+                <select id="statusFilter">
+                    <option value="">Status</option>
+                    <option value="alive">Alive</option>
+                    <option value="dead">Dead</option>
+                    <option value="unknown">Unknown</option>
+                </select> 
+                <button id="applyFilters">Apply filters</button>
+            </div>
+
+
+            <ul class="nav">
+                <li><a href="https://rickandmortyapi.com/documentation">Rick and Morty API</a></li>
+                <li><a href="https://github.com/tireshii/Rick-and-morty" target="_blank">GitHub Repo</a></li>
+            </ul>
+
+            
+        </section>
+
+        <section class="search-result">
+            <div class="pager">
+                <img class="previous" src="img/prev-arrow.png" alt="previous">
+                <h2 class="pager-counter">Results</h2>
+                <img class="next" src="img/next-arrow.png" alt="next">
+            </div>
+
+            <div id="content" class="gallery"></div>
+
+            <div class="pager">
+                <img class="previous" src="img/prev-arrow.png" alt="previous">
+                <h2 class="pager-counter"></h2>
+                <img class="next" src="img/next-arrow.png" alt="next">
+            </div>
+            <a href="#logo"><img class="top-arrow-btn" src="img/top-arrow.png" alt="Back to Top"></a>
+        </section>
+
+    </main>
+</body>
+
+</html>
