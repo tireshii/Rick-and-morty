@@ -1,7 +1,7 @@
 # Тестовое задание для frontend стажировки в летней школы от VVDEV&FLANG
 
 ## [Описание задачи](https://organic-danthus-765.notion.site/7000eb9bef3342db9bab14c58ebdc31f)
-## [Ссылка на сайт](tireshii.github.io/Rick-and-morty/)
+## [Ссылка на сайт](https://tireshii.github.io/Rick-and-morty/)
 Чтобы скомпилировать проект нужно использовать tsc
 ```console
 $ tsc
