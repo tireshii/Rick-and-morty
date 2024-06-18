@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let currentPage = 1;
     let totalPages = 1;
     const characterList = document.getElementById("content") as HTMLElement;
-    const error = document.getElementById("error") as HTMLElement;
+    const errorMessage = document.getElementById("error") as HTMLElement;
     const prevBtns = document.querySelectorAll(".previous") as NodeListOf<HTMLButtonElement>;
     const nextBtns = document.querySelectorAll(".next") as NodeListOf<HTMLButtonElement>;
     const searchInput = document.getElementById("searchInput") as HTMLInputElement;
@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             const data = await response.json() as APIResponseOk | APIResponseError;
 
             characterList.innerHTML = "";
-            error.textContent = "";
+            errorMessage.textContent = "";
             if ('error' in data) {
                 totalPages = 1;
-                error.textContent = "Не найдено";
+                errorMessage.textContent = "Не найдено";
             } else {
                 totalPages = data.info.pages ?? 1;
                 data.results.forEach(character => {;
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
         } catch (error) {
-            error.textContent = `Ошибка: ${error}`;
+            errorMessage.textContent = `Ошибка: ${error}`;
         }
     }
     const openModal = async (characterId: number) => {
