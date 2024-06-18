@@ -10,10 +10,13 @@ interface Character {
         link: string
     }
 }
-interface APIResponse {
+interface APIResponseOk {
     info: {
         count: number,
         pages: number
     }
     results: Character []
+}
+interface APIResponseError{
+    error: string
 }
